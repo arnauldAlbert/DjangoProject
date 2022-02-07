@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang=fr>
+<head>
+    <meta charset="UTF-8">
+    <title>mon formulaire</title>
+</head>
+<body>
+    <form action="/formulaire/traitement/" method="POST">
+        {%csrf_token%}
+        {{ form.as_ul }}
+        <input type="submit" value="envoyer les données"\>
+    </form>
+</body>
+</html>
