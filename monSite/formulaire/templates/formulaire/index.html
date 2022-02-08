@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    {% load static %}
+    <link href="{%static 'formulaire/style.css' %}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <ol>
         {% for l in liste %}
-            <li> {{l}} </li>
+            <li> {{l}} id : {{l.id}} <a href="{{l.id}}/update/"> update </a> <a href="{{l.id}}/delete/"> delete </a> </li>
         {%endfor%}
     </ol>
 </body>
