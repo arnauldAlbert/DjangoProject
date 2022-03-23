@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from  django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from . import models
 from django.template import loader
 
-from .forms import PersonForm2
+from forms import PersonForm2
+from forms import PersonForm
 
 
 # Create your views here.
@@ -32,7 +33,7 @@ def traitementUpdate(request, id):
         return render(request, 'formulaire/name.html', {'form': pForm})
 
 def traitement(request):
-    pForm = PersonForm2(request.POST)
+    pForm = PersonForm(request.POST)
     if pForm.is_valid():
         person = pForm.save()
         """ permet de faire la redirection vers la page d'accueil"""
