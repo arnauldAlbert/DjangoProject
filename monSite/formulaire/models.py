@@ -11,3 +11,4 @@ class Person(models.Model):
     def __str__(self):
         chaine =  f"Nom : {self.name} \n prénom : {self.firstname}"
         return chaine
+
